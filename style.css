@@ -1,0 +1,199 @@
+.official {
+    padding: 1rem;
+    background: #090909;
+    color: white;
+    font-size: 1rem;
+  }
+
+.state {
+    padding-top: 2rem;
+    background: #1B253A;
+    color: white;
+    font-size: 1rem;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container .dmv-title p{
+    width: auto;
+    height: 80px;
+}
+
+
+.container .state-logo img{
+    width:100px;
+    height: 80px;
+}
+
+.container .search-bar{
+    width: 100px;
+    height: 20px;
+    margin-left: auto;
+    background:beige;
+    color:#000000;
+    border-right: 20px;
+    vertical-align:middle;
+}
+
+.menu{
+    width:100px;
+    height: 40px;
+    margin-left: auto;
+    background:beige;
+    color:#000000;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.container .group-align {
+    display:flex;
+}
+
+.announcement {
+    padding: 1rem;
+    background: #E8854D;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    text-align: center;
+} 
+
+.quick-links {
+    padding: 1rem;
+    text-align: center;
+    background: #144872;
+    color: rgb(250, 250, 250);
+    font-size: 1rem;
+}  
+
+body {
+    background-color:black;
+}
+
+h1 {
+    color:white;
+    text-align: center;
+}
+
+h2 {
+    color:white;
+    text-align: left;
+}
+
+p {
+    color:white;
+    text-align: left;
+}
+
+ul {
+    color:white;
+    text-align: left;
+}
+
+figcaption {
+    color:white;
+    text-align: center;
+}
+
+.left {
+float: left;
+}
+
+.right {
+float: right;
+}
+
+/* accordion */
+input {
+    display: none;
+}
+
+label {
+    display: block;    
+    padding: 8px 22px;
+    margin: 0 0 1px 0;
+    cursor: pointer;
+    background: beige;
+    border-radius: 3px;
+    color: black;
+    transition: ease .5s;
+}
+
+label:hover {
+    background: #a4d1f3;
+}
+
+.content {
+    background: #000000;
+    padding: 10px 25px;
+    border: 1px solid #A7A7A7;
+    margin: 0 0 1px 0;
+    border-radius: 3px;
+}
+
+input + label + .content {
+    display: none;
+}
+
+input:checked + label + .content {
+    display: block;
+}
+/* accordion done */
+
+/* side by side */
+.flex-parent-element {
+    display: flex;
+    width: 100%;
+}
+
+.main {
+    flex: 75%;
+    margin: 20px;
+ }
+
+.sidebar {
+    flex: 20%;
+    margin: 20px;
+}
+
+.sidebar img {
+    height: auto;
+    width: 100%; 
+    margin-bottom: 10px;
+}
+
+.block {
+   padding-top: 2rem;  
+   padding-bottom: 2rem;
+}
+
+.img-set {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.special {
+    background-color: beige;
+    color:rgb(0, 0, 0);
+    display: inline;
+}
+
+/* responsive sidebar layout */
+@media screen and (max-width: 500px)  {
+    .flex-parent-element {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main {
+        width: 100%;
+    }
+    
+    .sidebar{
+        width: 100%;
+    }
+  }

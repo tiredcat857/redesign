@@ -1,0 +1,199 @@
+<!-- sources: 
+- one page scrolling and nav bar template: 
+https://github.com/StartBootstrap/startbootstrap-scrolling-nav 
+- all icons are downloaded from:
+https://thenounproject.com/
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Responive Redesign</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="index-style.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top">Responive Redesign</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#part1">Part 1: Identifying Usability Problems</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#part2">Part 2: Visual Design</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#part3">Part 3: Responsive Design</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder"> Responive Redesign for RI DMV's driver's license renewal page </h1>
+                <p class="lead">I redesigned Rhode Island’s DMV’s driver’s license renewal website. Last year, I actually went through the renewal process, looked up the website, and still followed the wrong instructions. The website is arranged as blocks of text with various links buried in the middle, which doesn’t convey much hierarchy of information, and makes it easy for people to ignore important details. I believe that if I had seen a better-designed website last time, I would have had a much easier time renewing my license. 
+
+                </p>
+            </div>
+        </header>
+        <!-- part1 section-->
+        <section id="part1">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Part 1: Identifyig Usability Problems</h2>
+
+                        <img src="./index-pics/screen.png" alt="screenshot of the RI DMV's website">
+
+                        <p class="caption">
+                            <a href="https://dmv.ri.gov/licenses-permits-ids/drivers-licenses/license-renewal">link to the website</a>
+                            <br>
+                        </p>
+
+                        <h4>Current conceptual model: </h4>
+                        <p class="bottom-space">
+                            
+                        The website probably expects users to read every paragraph carefully from top to bottom before taking any actions, and expects users to piece all the related information together themselves to know what the correct next step is. 
+                        </p>
+
+                        <div class="icon-and-title">
+                            <img class="icon" src="./index-pics/usability.png">
+                            <div class="title-content">
+                              <h4>Usability and Efficiency Issues</h4>
+                            </div>
+                          </div>
+                           
+                            <ui>
+                                <li><strong>Provides no shortcut for experienced users</strong>
+                                <br>
+                                All the links are buried in the middle of the paragraphs. Supposed someone already checked the website before, and knows that they need to download the application form and look up the address of the DMV’s office. There’s no shortcut or obvious button, and the user still has to start from the top of the page and locate the links they need after reading through a block of text.
+                                
+                                <li><strong>Irrelevant information takes up too much space</strong><br>
+                                    <p class="bottom-space">On the desktop version, the left pane contains a navigation bar for all web pages on the DMV website. While these are useful links and users might want to check them out, these links aren’t really relevant for users who are specifically looking for license renewal information. The left pane is also redundant since there’s already a menu dropdown button on the top right that provides almost the same navigation bar.</p>
+                                </li>
+                            </li>
+                            </ui>
+                        </div>
+
+                        <div class="icon-and-title">
+                            <img class="icon" src="./index-pics/learn.png">
+                            <div class="title-content">
+                              <h4>Learnability Issues</h4>
+                            </div>
+                          </div>
+                          <ui>
+                            <li><strong>Provides no overview for new users</strong><br>
+                                An overview can give the user a rough idea of how many steps they need to complete and set up the user’s expectation for the content on the rest of the web page.</li>
+                            <li><strong>All the information is clumped into blocks of text</strong><br>
+                                <p class="bottom-space">To renew a license, the general process involves figuring out what materials to prepare, and where to send over the materials and pay the fee. The user also needs to check whether they fall into any special categories, such as whether they are applying for a Real ID, whether they hold an international passport, or whether they need to change their address before renewing. The website should have different sections, instead of presenting everything in one big paragraph.
+                                </p>
+                            </li>
+                          </ui>
+                        
+                          <div class="icon-and-title">
+                            <img class="icon" src="./index-pics/mem.png">
+                            <div class="title-content">
+                              <h4>Memorability issue</h4>
+                            </div>
+                          </div>
+                          <p class="bottom-space">
+                            <strong>No consistent format for important information</strong><br>
+                        Currently there are bolded texts of varying sizes at the top, at the bottom, and in the middle of the web page. It’s hard for users to remember that there is bolded text at the top by the time they finish reading everything and reach the bottom.
+
+                            </p>
+                    </div>
+                   <h4>Accessibility Issues</h4>
+                   WAVE detected 0 errors or contrast errors, but found 6 alerts:
+                    <ui>
+                        <li><strong>1 broken same-page link</strong><br>
+                            The “top of page” button works just fine. WAVE’s algorithm probably made a mistake and doesn’t recognize "#top" as a builtin element in HTML5.
+                            </li>
+                            <li><strong>1 suspicious link</strong><br>A link text says “click here to learn how”, and WAVE sees it as extraneous text, but I believe it works fine here, because the button doesn’t look like an obvious link, and the text encourages people to click.
+                            </li>
+                            <li><strong>1 noscript element</strong><br>The element is an iframe that’s not visible on the main page, with attributes height="0" width="0" style="display:none;visibility:hidden". I agree that this element can be taken out.
+                            </li>
+                            <li><strong>3 redundant links</strong><br>Every time the Licence application form is mentioned, a link is provided. This is indeed redundant and can be avoided with better organization.
+                            </li>
+                    </ui>
+                    <br>
+                    
+                    WAVE also detected 4 headings. This helps me see that the headings aren’t fully utilized to show different levels of importance. One example is that the notification at the top about Real ID and the ad for supporting the troops are both h3. The main blob of text in the middle is not divided by different headings, so if there’s no way to quickly navigate to different parts of the page using headings as signposts. 
+                </div>
+            </div>
+        </section>
+
+        <!-- part2 section-->
+        <section class="bg-light" id="part2">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Part 2: Visual Redesign</h2>
+                        <h3> Low-fidelity Wireframing </h3>
+                        All annotations are written in red.
+                        <img src="lofi/desktop.png" width=80%>
+                        <figcaption>desktop version</figcaption>
+                        <br>
+                        <br>
+                        <img src="lofi/tablet.png" width=80%>
+                        <figcaption>tablet version</figcaption>
+                        <br>
+                        <br>
+                        <img src="lofi/phone.png" width=80%>
+                        <figcaption>phone version</figcaption>
+                        <br>
+                        <br>
+                        <h3> Visual Design Guide</h3>
+                        <img src="hifi/frame 2.png" width=80%>
+                        <br>
+                        <br>
+                        <h3> High-fidelity Wireframing</h3>
+                        All annotations are written in yellow sticky notes.
+                        <img src="hifi/Desktop scroll.png" width=80%>
+                        <figcaption>desktop version</figcaption>
+                        <br>
+                        <br>
+                        <img src="hifi/Frame 1.png" width=70%>
+                        <figcaption>tablet version</figcaption>
+                        <br>
+                        <br>
+                        <img src="hifi/iPhone 14 - 1.png" width=60%>
+                        <figcaption>phone version</figcaption>
+                        <br>
+                        <br>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- part3 section-->
+        <section  id="part3">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Part 3: Responsive Design</h2>
+                        <h3> <a href="redesign.html">Link to website</a> </h3>
+                        <p> Note that the website uses beige color to indicate clickable buttons and links. Most are not working, except for the accordion style menu under What You Need to Know and Ways to Renew.</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4"><p class="m-0 text-center text-white">CSCI1300 assignment</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
